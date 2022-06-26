@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*--------------------------------------------------------------
+Nav bar and drop down menu
+--------------------------------------------------------------*/
+navbar {
+	width: 100%;
+}
+
+nav, nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+}
+nav ul li{
+	font: bold 18px;
+	display: inline-block;
+	position: relative;
+	padding: 15px 20px;
+	background:#CD611B;
+	cursor: pointer;
+	
+}
+nav ul li a{
+	color: antiquewhite;
+}
+nav a {
+	display: block;
+	width: 130px;
+	text-decoration: none;
+	
+}
+nav li{
+	float: left;
+	width: 130px;
+	
+}
+nav li ul {
+	position: absolute;
+	background: #15739E;
+	width: 130px;
+	left: -999em;/*none is not read by screen readers so -999em just pushes it to the left and invisible*/
+}
+	
+	nav li:hover ul {
+		left: auto;
+	}
+		
+nav li ul li:hover {
+	background: #0E659A;
+}
+
+
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #E2AD0B;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #B85309;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+	margin: 0;
+	background-color: #EFA309;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: #EC5D06;
+    background: #41231A;
+	padding: .5em .8em;
+    border-radius: .2em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Monaco, Consolas, 'Montserrat', sans-serif;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #B2AA8C;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+
+/* Header */
+
+.masthead {
+	padding: 0 1em;
+	text-align: center;
+	border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+
+/* Promo section */
+
+
+.site-title {
+	text-align: center;
+}
+
+
+
+.site-title {
+	margin-top: -1em;
+	margin-bottom: 3em;
+}
+
+/* Splash section */
+
+.splash {
+	background: #968372;
+	padding-bottom: 2em;
+}
+
+.splash-content {
+	padding: 1.5em;
+}
+
+@media screen and (min-width: 600px) {
+	.splash-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+
+	.splash-text p {
+		padding-top: 0;
+	}
+}
+/* projects section */
+
+.projects {
+	padding: 2em 1em 1em;
+	background: #3E454C;
+}
+
+
+.projects ul {
+	margin: 0;
+	padding: 0;
+}
+
+.projects li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.projects {
+	padding: 1.5em;
+}
+
+/* More section */
+
+
+
+.more-content {
+	padding: 1.5em;
+}
+/* cards section */
+.cards {
+	max-width: 25em;
+	margin: 1em auto;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.cards a {
+	display: block;
+	margin-bottom: 1em;
+	text-decoration: none;
+}
+
+.caption {
+	padding: 1em;
+	font-size: 90%;
+	color: black;
+}
+
+.caption-title {
+	margin: 0;
+	font-size: 1.4em;
+	line-height: 1em;
+}
+
+.caption p {
+	margin-top: .5em;
+	margin-bottom: 0;
+}
+
+.cards a:focus .caption,
+.cards a:hover .caption {
+	background: hsl(0, 0%, 97%);
+}
+/* More section */
+
+.more {
+	padding: 1em;
+}
+
+.more-content {
+	column-count: 2;
+	column-gap: 20px;
+}
+
+/* Twins section */
+
+.sidebar {
+	background: hsl(0, 0%, 90%);
+}
+
+.twin {
+	padding: 2em;
+	background: #EABE3E;
+	color: white;
+}
+
+
+/* footer section */
+.footer {
+	padding: 2em;
+	background-image: url("images/blur-lake.jpg");
+	color: black;
+	text-align: center;
+}
+
+.footer a {
+	color: white;
+}
+
+.footer a:hover,
+.footer a:focus {
+	border-bottom: 1px solid white;
+}
+
+
+/*--------------------------------------------------------------
+Use flex to create a three-bucket layout
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+	@supports (display: flex) {
+
+		.projects ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.projects li {
+			width: 48%;
+		}
+
+	}
+}
+
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+.site {
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 30em) {
+
+		.cards {
+			margin: 0 auto;
+			padding: 1em;
+		}
+
+		.card {
+			margin: 1em 0;
+			padding: .5em;
+			display: grid;
+			grid-template-columns: 8em auto;
+		}
+
+		.cards a:focus,
+		.cards a:hover {
+			outline: 1px solid hsl(0, 0%, 80%);
+		}
+	}
+
+	@media screen and (min-width: 60em) {
+
+		.cards {
+			max-width: none;
+			margin: 1em 0;
+			display: grid;
+			grid-template-columns: repeat(2, 25em);
+			grid-gap: 1em;
+			justify-content: center;
+		}
+
+		.card {
+			margin: 0;
+		}
+
+		.double {
+			grid-row: span 3;
+		}
+
+		.double .card {
+			display: block;
+		}
+
+	}
+
+}
